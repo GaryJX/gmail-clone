@@ -1,0 +1,33 @@
+.sidebarTab {
+  display: flex;
+  align-items: center;
+  border-top-right-radius: 1em;
+  border-bottom-right-radius: 1em;
+  padding: 0.75em;
+  color: #818181;
+  cursor: pointer;
+
+  .title {
+    flex: 1;
+    font-size: 1em;
+    margin-left: 0.75em;
+  }
+
+  .number {
+    display: none;
+  }
+
+  &:hover {
+    &,
+    .title,
+    .number {
+      background-color: #fcecec;
+      color: #c04b37;
+      font-weight: bold;
+    }
+
+    .number {
+      display: inline;
+    }
+  }
+}
