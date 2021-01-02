@@ -1,0 +1,44 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid whitesmoke;
+  padding: 0 1em;
+
+  .headerLeft {
+    display: flex;
+    align-items: center;
+
+    img {
+      object-fit: contain;
+      height: 5em;
+      margin-left: 0.5em;
+    }
+  }
+
+  .headerCenter {
+    display: flex;
+    flex: 0.7;
+    align-items: center;
+    background-color: whitesmoke;
+    padding: 0.5em;
+    border-radius: 0.5em;
+
+    :global(.MuiButtonBase-root) {
+      padding: 0.25em;
+    }
+
+    input {
+      border: none;
+      flex: 1;
+      padding: 0.5em;
+      outline: none;
+      font-size: 1em;
+      background-color: transparent;
+    }
+  }
+
+  .headerRight {
+    display: flex;
+  }
+}
