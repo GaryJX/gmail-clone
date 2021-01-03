@@ -1,5 +1,5 @@
 import { Typography } from "@material-ui/core";
-import styles from "./EmailSection.module.scss";
+import styles from "./EmailListSection.module.scss";
 
 type Props = {
   icon: React.ReactNode;
@@ -8,14 +8,14 @@ type Props = {
   selected?: boolean;
 };
 
-const EmailSection: React.FC<Props> = ({
+const EmailListSection: React.FC<Props> = ({
   icon,
   title,
   color,
   selected = false,
 }) => (
   <div
-    className={`${styles.emailSection} ${selected ? styles.selected : ""}`}
+    className={`${styles.emailListSection} ${selected ? styles.selected : ""}`}
     style={{ color: `${selected ? color : "#818181"}` }}
   >
     {icon}
@@ -28,4 +28,4 @@ const EmailSection: React.FC<Props> = ({
   </div>
 );
 
-export default EmailSection;
+export default EmailListSection;

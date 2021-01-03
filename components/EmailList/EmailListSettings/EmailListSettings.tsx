@@ -6,10 +6,10 @@ import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 import KeyboardHideIcon from "@material-ui/icons/KeyboardHide";
 import SettingsIcon from "@material-ui/icons/Settings";
-import styles from "./EmailSettings.module.scss";
+import styles from "./EmailListSettings.module.scss";
 
-const EmailSettings: React.FC = () => (
-  <section className={styles.emailSettings}>
+const EmailListSettings: React.FC = () => (
+  <section className={styles.emailListSettings}>
     <div>
       <Checkbox />
       <IconButton>
@@ -39,4 +39,4 @@ const EmailSettings: React.FC = () => (
   </section>
 );
 
-export default EmailSettings;
+export default EmailListSettings;

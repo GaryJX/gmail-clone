@@ -1,0 +1,46 @@
+.email {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: whitesmoke;
+
+  .body {
+    margin: 1em;
+    padding: 1em;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+    .bodyHeader {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid whitesmoke;
+      padding-bottom: 1em;
+
+      .bodyHeaderLeft {
+        display: flex;
+        align-items: center;
+
+        h2 {
+          margin-right: 0.5em;
+        }
+
+        :global(.MuiSvgIcon-root) {
+          fill: #e8ab02;
+        }
+
+        .title {
+        }
+      }
+
+      .time {
+        font-size: 0.75em;
+      }
+    }
+
+    .bodyContent {
+      padding-top: 1em;
+    }
+  }
+}

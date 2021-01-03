@@ -1,4 +1,4 @@
-.emailRow {
+.emailListRow {
   display: flex;
   align-items: center;
   height: 3em;
@@ -19,8 +19,7 @@
     flex: 1;
 
     .message {
-      min-width: 0;
-      max-width: auto;
+      max-width: 40em; // TODO: Eventually figure out how to have dynamic ellipsis size
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;

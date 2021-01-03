@@ -1,9 +1,15 @@
-.contentContainer {
+.layout {
   display: flex;
-  // height: 100vh;
+  flex-direction: column;
+  height: 100vh;
 
-  .content {
+  .contentContainer {
+    display: flex;
     flex: 1;
-    // overflow: auto;
+
+    .content {
+      display: flex;
+      flex: 1;
+    }
   }
 }
