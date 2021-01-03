@@ -1,7 +1,8 @@
 import React from "react";
 import Head from "next/head";
-import Header from "../Header/Header";
-import Sidebar from "../Sidebar/Sidebar";
+import Header from "./Header/Header";
+import Sidebar from "./Sidebar/Sidebar";
+import styles from "./Layout.module.scss";
 
 type Props = {
   children?: React.ReactNode;
@@ -14,8 +15,10 @@ const Layout: React.FC<Props> = ({ children, title = "Document Title" }) => (
       <title>{title}</title>
     </Head>
     <Header />
-    <Sidebar />
-    {children}
+    <div className={styles.contentContainer}>
+      <Sidebar />
+      <main className={styles.content}>{children}</main>
+    </div>
   </>
 );
 

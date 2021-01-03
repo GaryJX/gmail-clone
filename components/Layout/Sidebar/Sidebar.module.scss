@@ -1,9 +1,17 @@
 .sidebar {
+  width: 15em;
+  margin-right: 0.5em;
+
   .composeBtn {
     overflow: hidden;
     background-color: white;
     text-transform: capitalize;
     border-radius: 30px !important;
     padding: 1em 2em;
+  }
+
+  .footer {
+    display: flex;
+    justify-content: center;
   }
 }

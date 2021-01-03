@@ -6,10 +6,16 @@ type Props = {
   icon: React.ReactNode;
   title: string;
   number: number;
+  selected?: boolean;
 };
 
-const SidebarTab: React.FC<Props> = ({ icon, title, number }) => (
-  <div className={styles.sidebarTab}>
+const SidebarTab: React.FC<Props> = ({
+  icon,
+  title,
+  number,
+  selected = false,
+}) => (
+  <div className={`${styles.sidebarTab} ${selected ? styles.active : ""}`}>
     {icon}
     <Typography className={styles.title} variant="h4">
       {title}

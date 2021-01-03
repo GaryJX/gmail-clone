@@ -1,0 +1,29 @@
+.emailSection {
+  display: flex;
+  align-items: center;
+  padding: 1em;
+  min-width: 15em;
+  cursor: pointer;
+
+  &:hover {
+    background-color: whitesmoke;
+    &:not(.selected) {
+      color: black !important;
+    }
+  }
+
+  &.selected {
+    position: relative;
+
+    .bottomBorder {
+      position: absolute;
+      height: 3px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: 0 0.5em;
+      border-top-left-radius: 2em;
+      border-top-right-radius: 2em;
+    }
+  }
+}
