@@ -1,4 +1,4 @@
-import React, { useEffect, useLayoutEffect, useMemo } from "react";
+import React, { useEffect, useMemo } from "react";
 import Head from "next/head";
 import { AppProps } from "next/app";
 import "../styles/global.scss";
