@@ -35,6 +35,13 @@ const EmailList: React.FC = () => (
         content="Content Content Content Content Content Content Content ContentContent Content Content Content Content"
         date="Date"
       />
+      <EmailRow
+        id=""
+        sender="Sender"
+        subject="Subject"
+        content="Content Content Content Content Content Content Content ContentContentContent Content Content Content Content Content Content ContentContent Content Content Content Content"
+        date="Date"
+      />
     </section>
   </div>
 );

@@ -23,13 +23,12 @@ const EmailRow: React.FC<Props> = ({ id, sender, subject, content, date }) => (
       </IconButton>
     </div>
     <div className="sender">{sender}</div>
-    <div className={styles.contentWrapper}>
-      <Typography variant="body1" component="h5" className={styles.subject}>
-        {subject}
-      </Typography>
-      {content}
+    <div className={styles.messageWrapper}>
+      <div className={styles.message}>
+        <span className={styles.subject}>{subject}</span> - {content}
+      </div>
     </div>
-    <div className="date">{date}</div>
+    <div className={styles.date}>{date}</div>
   </div>
 );
 

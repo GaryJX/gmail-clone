@@ -3,6 +3,7 @@
   align-items: center;
   height: 3em;
   border-bottom: 1px solid whitesmoke;
+  padding: 0 0.5em;
   cursor: pointer;
 
   &:hover {
@@ -14,21 +15,24 @@
     display: flex;
   }
 
-  .contentWrapper {
-    // display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex: 0.8;
-    width: 200px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    padding: 0 0.5em;
+  .messageWrapper {
+    flex: 1;
 
-    .subject {
-    }
+    .message {
+      min-width: 0;
+      max-width: auto;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      padding: 0 0.5em;
 
-    .content {
+      .subject {
+        font-weight: bold;
+      }
     }
+  }
+
+  .date {
+    font-weight: bold;
   }
 }
