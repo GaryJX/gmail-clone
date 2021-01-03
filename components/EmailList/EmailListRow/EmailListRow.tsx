@@ -1,5 +1,4 @@
-import Link from "next/link";
-import { Checkbox, IconButton, Typography } from "@material-ui/core";
+import { Checkbox, IconButton } from "@material-ui/core";
 import StarBorderOutlinedIcon from "@material-ui/icons/StarBorderOutlined";
 import LabelImportantOutlinedIcon from "@material-ui/icons/LabelImportantOutlined";
 import styles from "./EmailListRow.module.scss";

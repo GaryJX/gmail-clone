@@ -9,7 +9,7 @@ import styles from "./ComposeMail.module.scss";
 
 const ComposeMail: React.FC = () => {
   const { dispatch } = useContext(MailContext);
-  const { register, handleSubmit, watch, errors } = useForm();
+  const { register, handleSubmit, errors } = useForm();
 
   const onSubmit = (formData: any) => {
     console.log(formData);
