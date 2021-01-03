@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import SidebarTab from "../SidebarTab/SidebarTab";
 import { Button, IconButton } from "@material-ui/core";
 import AddIcon from "@material-ui/icons/Add";
@@ -13,37 +13,43 @@ import PersonIcon from "@material-ui/icons/Person";
 import DuoIcon from "@material-ui/icons/Duo";
 import PhoneIcon from "@material-ui/icons/Phone";
 import styles from "./Sidebar.module.scss";
+import { MailContext } from "../../../reducers/mailReducer";
 
-const Sidebar: React.FC = () => (
-  <aside className={styles.sidebar}>
-    <Button
-      variant="contained"
-      startIcon={<AddIcon />}
-      className={styles.composeBtn}
-    >
-      Compose
-    </Button>
-    <SidebarTab icon={<InboxIcon />} title="Inbox" number={123} selected />
-    <SidebarTab icon={<StarIcon />} title="Starred" number={10} />
-    <SidebarTab icon={<WatchLaterIcon />} title="Snoozed" number={10} />
-    <SidebarTab icon={<LabelImportantIcon />} title="Important" number={10} />
-    <SidebarTab icon={<SendIcon />} title="Sent" number={10} />
-    <SidebarTab icon={<InsertDriveFileIcon />} title="Drafts" number={10} />
-    <SidebarTab icon={<ExpandMoreIcon />} title="More" number={10} />
-    <div className={styles.footer}>
-      <div>
-        <IconButton>
-          <PersonIcon />
-        </IconButton>
-        <IconButton>
-          <DuoIcon />
-        </IconButton>
-        <IconButton>
-          <PhoneIcon />
-        </IconButton>
+const Sidebar: React.FC = () => {
+  const { dispatch } = useContext(MailContext);
+
+  return (
+    <aside className={styles.sidebar}>
+      <Button
+        variant="contained"
+        startIcon={<AddIcon />}
+        className={styles.composeBtn}
+        onClick={() => dispatch({ type: "openComposeMessage" })}
+      >
+        Compose
+      </Button>
+      <SidebarTab icon={<InboxIcon />} title="Inbox" number={123} selected />
+      <SidebarTab icon={<StarIcon />} title="Starred" number={10} />
+      <SidebarTab icon={<WatchLaterIcon />} title="Snoozed" number={10} />
+      <SidebarTab icon={<LabelImportantIcon />} title="Important" number={10} />
+      <SidebarTab icon={<SendIcon />} title="Sent" number={10} />
+      <SidebarTab icon={<InsertDriveFileIcon />} title="Drafts" number={10} />
+      <SidebarTab icon={<ExpandMoreIcon />} title="More" number={10} />
+      <div className={styles.footer}>
+        <div>
+          <IconButton>
+            <PersonIcon />
+          </IconButton>
+          <IconButton>
+            <DuoIcon />
+          </IconButton>
+          <IconButton>
+            <PhoneIcon />
+          </IconButton>
+        </div>
       </div>
-    </div>
-  </aside>
-);
+    </aside>
+  );
+};
 
 export default Sidebar;

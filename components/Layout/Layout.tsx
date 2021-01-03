@@ -12,7 +12,7 @@ type Props = {
 };
 
 const Layout: React.FC<Props> = ({ children, title = "Document Title" }) => {
-  const { state, dispatch } = useContext(MailContext);
+  const { state } = useContext(MailContext);
 
   return (
     <div className={styles.layout}>
@@ -23,7 +23,7 @@ const Layout: React.FC<Props> = ({ children, title = "Document Title" }) => {
       <div className={styles.contentContainer}>
         <Sidebar />
         <main className={styles.content}>{children}</main>
-        <ComposeMail />
+        {state.openComposeMessage && <ComposeMail />}
       </div>
     </div>
   );

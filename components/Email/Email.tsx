@@ -1,6 +1,6 @@
 import React from "react";
 import EmailSettings from "./EmailSettings/EmailSettings";
-import { Paper, Typography } from "@material-ui/core";
+import { Paper, TextField, Typography } from "@material-ui/core";
 import LabelImportantIcon from "@material-ui/icons/LabelImportant";
 import styles from "./Email.module.scss";
 
