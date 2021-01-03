@@ -1,4 +1,5 @@
 import EmailSection from "./EmailSection/EmailSection";
+import EmailRow from "./EmailRow/EmailRow";
 import InboxIcon from "@material-ui/icons/Inbox";
 import PeopleIcon from "@material-ui/icons/People";
 import LocalOfferIcon from "@material-ui/icons/LocalOffer";
@@ -27,6 +28,13 @@ const EmailList: React.FC = () => (
           // selected
         />
       </div>
+      <EmailRow
+        id=""
+        sender="Sender"
+        subject="Subject"
+        content="Content Content Content Content Content Content Content ContentContent Content Content Content Content"
+        date="Date"
+      />
     </section>
   </div>
 );
